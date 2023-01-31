@@ -9,11 +9,6 @@ if (!function_exists('resolve_response')){
     function resolve_response(...$arguments): array|ResponderService|JsonResponse {
         $responder = new ResponderService();
 
-        if (isset($arguments['newVersionResponse'])) {
-            $responder->setNewVersionResponse(
-                $arguments['newVersionResponse']
-            );
-        }
 
         $resolved = $responder->resolve($arguments);
 
