@@ -1,0 +1,27 @@
+{
+    "name": "oguz/response-package",
+    "description": "Laravel Response Package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Oguz\\ResponsePackage\\": "src/"
+        },
+        "files": [
+            "src/config/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Oguz Kurukaya",
+            "email": "oguzkurukaya@gmail.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Oguz\\ResponsePackage\\ResponsePackageProvider"
+            ]
+        }
+    }
+}
