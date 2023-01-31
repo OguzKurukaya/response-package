@@ -35,7 +35,7 @@ class ResponderService
         return $this->getResponse();
     }
 
-    private function parseArguments(array $arguments)
+    private function parseArguments(array $arguments): void
     {
         $this->handleMeta($arguments['meta'] ?? []);
 
@@ -49,7 +49,7 @@ class ResponderService
             $this->clearResponse();
     }
 
-    private function handleMeta(array $meta = [])
+    private function handleMeta(array $meta = []): void
     {
         if (is_null(config(self::ERROR_TYPES_FOLDER))){
          $this->response['meta'] = [
@@ -89,7 +89,7 @@ class ResponderService
         return $this->response;
     }
 
-    private function clearResponse()
+    private function clearResponse(): void
     {
         $responseTMP = [];
         foreach ($this->response['meta'] as $key => $response) {
